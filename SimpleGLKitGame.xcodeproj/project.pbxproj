@@ -16,6 +16,8 @@
 		CF42C68B15F0C59000745E93 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF42C68A15F0C59000745E93 /* QuartzCore.framework */; };
 		CF42C68D15F0C59B00745E93 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF42C68C15F0C59B00745E93 /* OpenGLES.framework */; };
 		CF42C68F15F0C5A400745E93 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF42C68E15F0C5A400745E93 /* GLKit.framework */; };
+		CF42C69515F0C6A400745E93 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF42C69415F0C6A400745E93 /* MainStoryboard.storyboard */; };
+		CF42C69915F0C73400745E93 /* SGGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF42C69815F0C73400745E93 /* SGGViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,9 @@
 		CF42C68A15F0C59000745E93 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		CF42C68C15F0C59B00745E93 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		CF42C68E15F0C5A400745E93 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		CF42C69415F0C6A400745E93 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
+		CF42C69715F0C73400745E93 /* SGGViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGGViewController.h; sourceTree = "<group>"; };
+		CF42C69815F0C73400745E93 /* SGGViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGGViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +91,9 @@
 			children = (
 				CF42C68215F0C34C00745E93 /* SGGAppDelegate.h */,
 				CF42C68315F0C34C00745E93 /* SGGAppDelegate.m */,
+				CF42C69715F0C73400745E93 /* SGGViewController.h */,
+				CF42C69815F0C73400745E93 /* SGGViewController.m */,
+				CF42C69415F0C6A400745E93 /* MainStoryboard.storyboard */,
 				CF42C67A15F0C34C00745E93 /* Supporting Files */,
 			);
 			path = SimpleGLKitGame;
@@ -155,6 +163,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF42C67E15F0C34C00745E93 /* InfoPlist.strings in Resources */,
+				CF42C69515F0C6A400745E93 /* MainStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,6 +176,7 @@
 			files = (
 				CF42C68015F0C34C00745E93 /* main.m in Sources */,
 				CF42C68415F0C34C00745E93 /* SGGAppDelegate.m in Sources */,
+				CF42C69915F0C73400745E93 /* SGGViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +282,7 @@
 				CF42C68915F0C34C00745E93 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
