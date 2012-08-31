@@ -18,6 +18,13 @@
 		CF42C68F15F0C5A400745E93 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF42C68E15F0C5A400745E93 /* GLKit.framework */; };
 		CF42C69515F0C6A400745E93 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF42C69415F0C6A400745E93 /* MainStoryboard.storyboard */; };
 		CF42C69915F0C73400745E93 /* SGGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF42C69815F0C73400745E93 /* SGGViewController.m */; };
+		CF42C6A915F0CC0E00745E93 /* background-music-aac.caf in Resources */ = {isa = PBXBuildFile; fileRef = CF42C6A215F0CC0E00745E93 /* background-music-aac.caf */; };
+		CF42C6AA15F0CC0E00745E93 /* pew-pew.wav in Resources */ = {isa = PBXBuildFile; fileRef = CF42C6A315F0CC0E00745E93 /* pew-pew.wav */; };
+		CF42C6AB15F0CC0E00745E93 /* Player.png in Resources */ = {isa = PBXBuildFile; fileRef = CF42C6A415F0CC0E00745E93 /* Player.png */; };
+		CF42C6AC15F0CC0E00745E93 /* Projectile.png in Resources */ = {isa = PBXBuildFile; fileRef = CF42C6A515F0CC0E00745E93 /* Projectile.png */; };
+		CF42C6AD15F0CC0E00745E93 /* Target.png in Resources */ = {isa = PBXBuildFile; fileRef = CF42C6A615F0CC0E00745E93 /* Target.png */; };
+		CF42C6AE15F0CC0E00745E93 /* YouLose.png in Resources */ = {isa = PBXBuildFile; fileRef = CF42C6A715F0CC0E00745E93 /* YouLose.png */; };
+		CF42C6AF15F0CC0E00745E93 /* YouWin.png in Resources */ = {isa = PBXBuildFile; fileRef = CF42C6A815F0CC0E00745E93 /* YouWin.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +44,13 @@
 		CF42C69415F0C6A400745E93 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
 		CF42C69715F0C73400745E93 /* SGGViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGGViewController.h; sourceTree = "<group>"; };
 		CF42C69815F0C73400745E93 /* SGGViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGGViewController.m; sourceTree = "<group>"; };
+		CF42C6A215F0CC0E00745E93 /* background-music-aac.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "background-music-aac.caf"; sourceTree = "<group>"; };
+		CF42C6A315F0CC0E00745E93 /* pew-pew.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "pew-pew.wav"; sourceTree = "<group>"; };
+		CF42C6A415F0CC0E00745E93 /* Player.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Player.png; sourceTree = "<group>"; };
+		CF42C6A515F0CC0E00745E93 /* Projectile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Projectile.png; sourceTree = "<group>"; };
+		CF42C6A615F0CC0E00745E93 /* Target.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Target.png; sourceTree = "<group>"; };
+		CF42C6A715F0CC0E00745E93 /* YouLose.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = YouLose.png; sourceTree = "<group>"; };
+		CF42C6A815F0CC0E00745E93 /* YouWin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = YouWin.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +108,7 @@
 				CF42C69715F0C73400745E93 /* SGGViewController.h */,
 				CF42C69815F0C73400745E93 /* SGGViewController.m */,
 				CF42C69415F0C6A400745E93 /* MainStoryboard.storyboard */,
+				CF42C6A115F0CC0E00745E93 /* SGGResources */,
 				CF42C67A15F0C34C00745E93 /* Supporting Files */,
 			);
 			path = SimpleGLKitGame;
@@ -108,6 +123,20 @@
 				CF42C68115F0C34C00745E93 /* SimpleGLKitGame-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CF42C6A115F0CC0E00745E93 /* SGGResources */ = {
+			isa = PBXGroup;
+			children = (
+				CF42C6A215F0CC0E00745E93 /* background-music-aac.caf */,
+				CF42C6A315F0CC0E00745E93 /* pew-pew.wav */,
+				CF42C6A415F0CC0E00745E93 /* Player.png */,
+				CF42C6A515F0CC0E00745E93 /* Projectile.png */,
+				CF42C6A615F0CC0E00745E93 /* Target.png */,
+				CF42C6A715F0CC0E00745E93 /* YouLose.png */,
+				CF42C6A815F0CC0E00745E93 /* YouWin.png */,
+			);
+			path = SGGResources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,6 +193,13 @@
 			files = (
 				CF42C67E15F0C34C00745E93 /* InfoPlist.strings in Resources */,
 				CF42C69515F0C6A400745E93 /* MainStoryboard.storyboard in Resources */,
+				CF42C6A915F0CC0E00745E93 /* background-music-aac.caf in Resources */,
+				CF42C6AA15F0CC0E00745E93 /* pew-pew.wav in Resources */,
+				CF42C6AB15F0CC0E00745E93 /* Player.png in Resources */,
+				CF42C6AC15F0CC0E00745E93 /* Projectile.png in Resources */,
+				CF42C6AD15F0CC0E00745E93 /* Target.png in Resources */,
+				CF42C6AE15F0CC0E00745E93 /* YouLose.png in Resources */,
+				CF42C6AF15F0CC0E00745E93 /* YouWin.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
