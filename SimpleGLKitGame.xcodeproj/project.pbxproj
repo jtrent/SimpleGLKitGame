@@ -25,6 +25,7 @@
 		CF42C6AD15F0CC0E00745E93 /* Target.png in Resources */ = {isa = PBXBuildFile; fileRef = CF42C6A615F0CC0E00745E93 /* Target.png */; };
 		CF42C6AE15F0CC0E00745E93 /* YouLose.png in Resources */ = {isa = PBXBuildFile; fileRef = CF42C6A715F0CC0E00745E93 /* YouLose.png */; };
 		CF42C6AF15F0CC0E00745E93 /* YouWin.png in Resources */ = {isa = PBXBuildFile; fileRef = CF42C6A815F0CC0E00745E93 /* YouWin.png */; };
+		CF6B6D8815F22A8100D5B9D5 /* SGGSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6B6D8715F22A8100D5B9D5 /* SGGSprite.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,8 @@
 		CF42C6A615F0CC0E00745E93 /* Target.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Target.png; sourceTree = "<group>"; };
 		CF42C6A715F0CC0E00745E93 /* YouLose.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = YouLose.png; sourceTree = "<group>"; };
 		CF42C6A815F0CC0E00745E93 /* YouWin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = YouWin.png; sourceTree = "<group>"; };
+		CF6B6D8615F22A8100D5B9D5 /* SGGSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGGSprite.h; sourceTree = "<group>"; };
+		CF6B6D8715F22A8100D5B9D5 /* SGGSprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGGSprite.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +111,8 @@
 				CF42C69715F0C73400745E93 /* SGGViewController.h */,
 				CF42C69815F0C73400745E93 /* SGGViewController.m */,
 				CF42C69415F0C6A400745E93 /* MainStoryboard.storyboard */,
+				CF6B6D8615F22A8100D5B9D5 /* SGGSprite.h */,
+				CF6B6D8715F22A8100D5B9D5 /* SGGSprite.m */,
 				CF42C6A115F0CC0E00745E93 /* SGGResources */,
 				CF42C67A15F0C34C00745E93 /* Supporting Files */,
 			);
@@ -213,6 +218,7 @@
 				CF42C68015F0C34C00745E93 /* main.m in Sources */,
 				CF42C68415F0C34C00745E93 /* SGGAppDelegate.m in Sources */,
 				CF42C69915F0C73400745E93 /* SGGViewController.m in Sources */,
+				CF6B6D8815F22A8100D5B9D5 /* SGGSprite.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
