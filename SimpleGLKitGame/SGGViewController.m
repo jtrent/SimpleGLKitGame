@@ -7,13 +7,17 @@
 //
 
 #import "SGGViewController.h"
+#import "SGGSprite.h"
 
 @interface SGGViewController()
 @property (strong, nonatomic) EAGLContext *context;
+@property (strong) GLKBaseEffect *effect;
+@property (strong) SGGSprite *player;
 @end
 
 @implementation SGGViewController
 @synthesize context = _context;
+@synthesize player = _player;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -27,13 +31,23 @@
     GLKView *view = (GLKView *)self.view;
     view.context = self.context;
     [EAGLContext setCurrentContext:self.context];
+    self.effect = [[GLKBaseEffect alloc] init];
+    
+    GLKMatrix4 projectionMatrix = GLKMatrix4MakeOrtho(0, 480, 0, 320, -1024, 1024);
+    self.effect.transform.projectionMatrix = projectionMatrix;
+    
+    self.player = [[SGGSprite alloc] initWithFile:@"Player.png" effect:self.effect];
 }
 
 #pragma mark - GLKViewDelegate
 
 - (void)glkView:(GLKView *)view drawInRect:(CGRect)rect {
-    glClearColor(0, 104.0/255.0, 55.0/255.0, 1.0);
+    glClearColor(1, 1, 1, 1);
     glClear(GL_COLOR_BUFFER_BIT);
+    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+    glEnable(GL_BLEND);
+    
+    [self.player render];
 }
 
 - (void)update {
