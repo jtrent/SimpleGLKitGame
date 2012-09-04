@@ -34,6 +34,8 @@ TexturedQuad TexturedQuadMake(CGFloat width, CGFloat height);
 @synthesize effect = _effect;
 @synthesize quad = _quad;
 @synthesize textureInfo = _textureInfo;
+@synthesize position = _position;
+@synthesize contentSize = _contentSize;
 
 - (id)initWithFile:(NSString *)fileName effect:(GLKBaseEffect *)effect {
     if ((self = [super init])) {
@@ -52,16 +54,25 @@ TexturedQuad TexturedQuadMake(CGFloat width, CGFloat height);
             return nil;
         }
         
+        self.contentSize = CGSizeMake(self.textureInfo.width, self.textureInfo.height);
         self.quad = TexturedQuadMake(self.textureInfo.width, self.textureInfo.height);
     }
     
     return self;
 }
 
+- (GLKMatrix4)modelMatrix {
+    GLKMatrix4 modelMatrix = GLKMatrix4Identity;
+    modelMatrix = GLKMatrix4Translate(modelMatrix, self.position.x, self.position.y, 0);
+    modelMatrix = GLKMatrix4Translate(modelMatrix, (-self.contentSize.width / 2), (-self.contentSize.height / 2), 0);
+    
+    return modelMatrix;
+}
+
 - (void)render {
     self.effect.texture2d0.name = self.textureInfo.name;
     self.effect.texture2d0.enabled = YES;
-    
+    self.effect.transform.modelviewMatrix = [self modelMatrix];
     [self.effect prepareToDraw];
     
     glEnableVertexAttribArray(GLKVertexAttribPosition);

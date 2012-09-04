@@ -37,6 +37,7 @@
     self.effect.transform.projectionMatrix = projectionMatrix;
     
     self.player = [[SGGSprite alloc] initWithFile:@"Player.png" effect:self.effect];
+    self.player.position = GLKVector2Make((self.player.contentSize.width / 2), 160);
 }
 
 #pragma mark - GLKViewDelegate

@@ -11,6 +11,9 @@
 
 @interface SGGSprite : NSObject
 
+@property (assign) GLKVector2 position;
+@property (assign) CGSize contentSize;
+
 - (id)initWithFile:(NSString *)fileName effect:(GLKBaseEffect *)effect;
 - (void)render;
 
