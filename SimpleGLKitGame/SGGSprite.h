@@ -13,8 +13,10 @@
 
 @property (assign) GLKVector2 position;
 @property (assign) CGSize contentSize;
+@property (assign) GLKVector2 moveVelocity;
 
 - (id)initWithFile:(NSString *)fileName effect:(GLKBaseEffect *)effect;
+- (void)update:(float)dt;
 - (void)render;
 
 @end

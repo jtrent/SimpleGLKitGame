@@ -23,11 +23,9 @@ typedef struct {
 TexturedQuad TexturedQuadMake(CGFloat width, CGFloat height);
 
 @interface SGGSprite()
-
 @property (strong) GLKBaseEffect *effect;
 @property (assign) TexturedQuad quad;
 @property (strong) GLKTextureInfo *textureInfo;
-
 @end
 
 @implementation SGGSprite
@@ -36,6 +34,7 @@ TexturedQuad TexturedQuadMake(CGFloat width, CGFloat height);
 @synthesize textureInfo = _textureInfo;
 @synthesize position = _position;
 @synthesize contentSize = _contentSize;
+@synthesize moveVelocity = _moveVelocity;
 
 - (id)initWithFile:(NSString *)fileName effect:(GLKBaseEffect *)effect {
     if ((self = [super init])) {
@@ -67,6 +66,11 @@ TexturedQuad TexturedQuadMake(CGFloat width, CGFloat height);
     modelMatrix = GLKMatrix4Translate(modelMatrix, (-self.contentSize.width / 2), (-self.contentSize.height / 2), 0);
     
     return modelMatrix;
+}
+
+- (void)update:(float)dt {
+    GLKVector2 curMove = GLKVector2MultiplyScalar(self.moveVelocity, dt);
+    self.position = GLKVector2Add(self.position, curMove);
 }
 
 - (void)render {

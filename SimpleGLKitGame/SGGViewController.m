@@ -13,11 +13,13 @@
 @property (strong, nonatomic) EAGLContext *context;
 @property (strong) GLKBaseEffect *effect;
 @property (strong) SGGSprite *player;
+@property (strong) NSMutableArray *children;
 @end
 
 @implementation SGGViewController
 @synthesize context = _context;
 @synthesize player = _player;
+@synthesize children = _children;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -38,6 +40,10 @@
     
     self.player = [[SGGSprite alloc] initWithFile:@"Player.png" effect:self.effect];
     self.player.position = GLKVector2Make((self.player.contentSize.width / 2), 160);
+    
+    self.children = [NSMutableArray array];
+    [self.children addObject:self.player];
+    //self.player.moveVelocity = GLKVector2Make(50, 50);
 }
 
 #pragma mark - GLKViewDelegate
@@ -48,11 +54,15 @@
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
     glEnable(GL_BLEND);
     
-    [self.player render];
+    for (SGGSprite *sprite in self.children) {
+        [sprite render];
+    }
 }
 
 - (void)update {
-    
+    for (SGGSprite *sprite in self.children) {
+        [sprite update:self.timeSinceLastUpdate];
+    }
 }
 
 
